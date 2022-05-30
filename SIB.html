@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi B</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3.5fr;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container >* {
+            margin: 10px;
+        }
+
+        nav {
+            background-color: rgb(0, 0, 201);
+            transition: 1s;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.5em;
+            color: rgb(149, 149, 255);
+            margin: 40px 0;
+        }
+
+        nav li:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .dipilih {
+            background-color: #000;
+        }
+
+        .tombol {
+            display: none;
+        }
+
+        .container2 {
+            display: grid;
+            grid-template-rows: 1fr 9fr .8fr;
+            overflow: hidden;
+        }
+
+        header {
+            padding: 10px;
+            text-align: center;
+            color: rgb(205, 205, 255);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.267);
+            background-color: rgb(23, 23, 255);
+        }
+
+        main {
+            margin: 10px;
+            overflow: auto;
+        }
+
+        main>*>h2 {
+            text-align: center;
+        }
+
+        .container-main {
+            padding: 10px;
+            background-color: rgba(41, 80, 255, 0.568);
+            margin: 10px 0;
+        }
+
+        #jadwal ol, #jadwal ul {
+            list-style: none;
+        }
+
+        #jadwal li {
+            margin: 20px 0;
+        }
+
+        hr {
+            margin: 10px 0;
+            border-color: #000;
+        }
+
+        footer {
+            background-color: #000;
+            color: grey;
+            display: flex;
+        }
+
+        footer p {
+            margin: auto;
+        }
+
+        @media (max-width: 679px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                position: fixed;
+                width: 70%;
+                height: 88%;
+                transform: translateX(-150%);
+            }
+
+            .tampil {
+                transform: translateX(0);
+            }
+
+            .tombol {
+                position: fixed;
+                display: block;
+                right: 0px;
+                top: 40%;
+                width: 50px;
+                height: 80px;
+                background-color: rgba(0, 0, 0, 0.493);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul></ul>
+        </nav>
+
+        <div class="tombol"></div>
+
+        <div class="container2">
+            <header>
+                <h1>Sistem Informasi B</h1>
+            </header>
+
+            <main>
+                <div id="jadwal">
+                    <h2>Jadwal</h2>
+                    <div class="container-main">
+                        <h2>Senin</h2>
+                        <hr>
+                        <ul>
+                            <li>
+                                <h3>Bahasa Inggris 2</h3>
+                                <h4>Nawangsih Edyanna Putri</h4>
+                                <p>Ruang 5 Lantai 2 Gedung B</p>
+                                <p>08.00 - 09.40</p>
+                            </li>
+                            <li>
+                                <h3>Logika Matematika</h3>
+                                <h4>Norma Puspitasari, M.Pd</h4>
+                                <p>09.40 - 12.30</p>
+                                <p>Ruang 6 Lantai 2 Gedung B</p>
+                            </li>
+                            <li>
+                                <h3>Kewarganegaraan</h3>
+                                <h4>Agung Wibiyanto</h4>
+                                <p>13.50 - 15.30</p>
+                                <p>Ruang 5 Lantai 2 Gedung B</p>
+                            </li>
+                        </ul>
+                    </div>
+            
+                    <div class="container-main">
+                        <h2>Selasa</h2>
+                        <hr>
+                        <ul>
+                            <li>
+                                <h3>Sistem Operasi</h3>
+                                <h4>Dwi Iskandar</h4>
+                                <p>Lab.Komputer 2 Lantai 3 Gedung A</p>
+                                <p>08.00 - 09.40</p>
+                            </li>
+                            <li>
+                                <h3>Kewirausahaan</h3>
+                                <h4>Edy Susanto & Agustinus Very Ricki</h4>
+                                <p>Ruang 1 Lantai 2 Gedung B</p>
+                                <p>09.40 - 11.20</p>
+                            </li>
+                        </ul>
+                    </div>
+            
+                    <div class="container-main">
+                        <h2>Rabu</h2>
+                        <hr>
+                        <ul>
+                            <li>
+                                <h3>ANSI (Analisis dan Perancangan Sistem Operasi)</h3>
+                                <h4>Edy Susena</h4>
+                                <p>Lab. Komputer 1 lantai 2 Gedung A</p>
+                                <P>09.40 - 12.10</P>
+                            </li>
+                            <li>
+                                <h3>Jarkom (Jaringan Komputer)</h3>
+                                <h4>Wasis Waluyo</h4>
+                                <p>Lab.Jaringan Lantai 2 Gedung B</p>
+                                <p>13.00 - 15.30</p>
+                            </li>
+                        </ul>
+                    </div>
+            
+                    <div class="container-main">
+                        <h2>Kamis</h2>
+                        <hr>
+                        <ul>
+                            <li>
+                                <h3>Pemrograman Web</h3>
+                                <h4>Canggih Ajika Pamungkas</h4>
+                                <p>Lab. Komputer 3 lantai 3 Gudang A</p>
+                                <p>08.00 - 10.30</p>
+                            </li>
+                            <li>
+                                <h3>KAP (Kecakapan Antar Personal)</h3>
+                                <h4>A. Anditha Sari, S.Sos, M.I.Kom</h4>
+                                <p>Ruang 5 Lantai 2 Gedung B</p>
+                                <p>10.30 - 12.10</p>
+                            </li>
+                        </ul>
+                    </div>
+            
+                    <div class="container-main">
+                        <h2>Jum'at</h2>
+                        <hr>
+                        <h3>Kosong</h3>
+                    </div>
+            
+                    <div class="container-main">
+                        <h2>Sabtu</h2>
+                        <hr>
+                        <h3>Kosong</h3>
+                    </div>
+                </div>
+
+                <div id="biodataSIB">
+                    <h2>Biodata SIB</h2>
+                    <div class="container-main">
+                        <h2>Arga</h2>
+                        <hr>
+                        <p>Ciptaning Banyu Arga</p>
+                        <p>Laki laki</p>
+                        <p>Wonogiri, 4 Agustus 2003</p>
+                        <p>B21056</p>
+                        <p>Karanglo 03/03 kepuhsari, manyaran, Wonogiri </p>
+                        <p>No. 085290736467</p>
+                        <p>Email: banyuarga190119@gmail.com</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+                    
+                    <div class="container-main">
+                        <h2>Ariffah</h2>
+                        <hr>
+                        <p>Ariffah Puput Hanafi</p>
+                        <p>Perempuan</p>
+                        <p>Surakarta, 18 Desember 2002</p>
+                        <p>B21026</p>
+                        <p>Jl Agung Timur VIII, Ngemplak, Mojosongo, Kec. Jebres, Kota Surakarta</p>
+                        <p>08882588295</p>
+                        <p>arifahpuput60@gmail.com</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Azhari</h2>
+                        <hr>
+                        <p>Azhari Ifham</p>
+                        <p>Laki-laki</p>
+                        <p>Kebumen, 8 Maret 2003</p>
+                        <p>B21049</p>
+                        <p>Bumi, Laweyan, Solo</p>
+                        <p>088233685568</p>
+                        <p>azhariifham@gmail.com</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Bintang</h2>
+                        <hr>
+                        <p>Nur Bintang Wahyuningsih</p>
+                        <p>Perempuan</p>
+                        <p>Sragen, 8 Maret 2002</p>
+                        <p>B21029</p>
+                        <p>Jalan Nusa Indah Dk. Badongan Ds.Tumpang Krasak RT.03 RW.01 Kec. Jati Kab. Kudus</p>
+                        <p>082324127506</p>
+                        <p>nurbintangwhyngsh@gmail.com</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Dewa</h2>
+                        <hr>
+                        <p>Putra dewa fortuna</p>
+                        <p>Laki-laki</p>
+                        <p>Surakarta 28 maret 2003</p>
+                        <p>B21042</p>
+                        <p>Tuwak RT 01 RW 02 gonilan sukoharjo</p>
+                        <p>085865763895</p>
+                        <p>Putraxki454@gmail.com</p>
+                        <p>Sistem informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Dikza</h2>
+                        <hr>
+                        <p>Risa Dikza Ramadhan</p>
+                        <p>Laki-laki</p>
+                        <p>Jakarta 24 November 2002</p>
+                        <p>B21061</p>
+                        <p>MELIKAN, BATURETNO, WONOGIRI</p>
+                        <p>081215216930</p>
+                        <p>dikzvelo13@gmail.com</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Eva</h2>
+                        <hr>
+                        <p>Eva Diah Rahayu</p>
+                        <p>perempuan</p>
+                        <p>Boyolali, 16 November 2002</p>
+                        <p>B21028</p>
+                        <p>Kebonsari barat 07/03, Kembang Kuning, Cepogo, Boyolali</p>
+                        <p>088806816744</p>
+                        <p>evaivul922@gmail.com</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Fadli</h2>
+                        <hr>
+                        <p>Muhammad Chafidzul Fadzli</p>
+                        <p>laki laki</p>
+                        <p>Temanggung, 25 april 2002</p>
+                        <p>B21054</p>
+                        <p>gang anggrek no 30 cemani grogol sukoharjo</p>
+                        <p>085728759734</p>
+                        <p>faddlii41055@gmail.com</p>
+                        <p>Sistem informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Faizal</h2>
+                        <hr>
+                        <p>Faizal Dwi Al Farizi</p>
+                        <p>Laki-Laki</p>
+                        <p>Pati, 28 September 2002</p>
+                        <p>B21055</p>
+                        <p>Talang Banaran RT 01 RW 02 Sukoharjo</p>
+                        <p>0895478120630</p>
+                        <p>faizaldwialfarizi@gmail.com</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Fuad</h2>
+                        <hr>
+                        <p>Fuad Rizky Pratama</p>
+                        <p>Laki-laki</p>
+                        <p>Klaten.2 - September - 2002</p>
+                        <p>B21071</p>
+                        <p>Sidorejo RT.27/11,Sisowarno,Wonosari,Klaten</p>
+                        <p>085858621193</p>
+                        <p>fuad.hadroh33@gmail.com</p>
+                        <p>Sistem informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Irena</h2>
+                        <hr>
+                        <p>Putri Irena Yupry Fani</p>
+                        <p>Perempuan</p>
+                        <p>Bojonegoro, 31 Agustus 2002</p>
+                        <p>B21025</p>
+                        <p>Dsn, becok DS, sumberjo Kec, Margomulyo Kab, Bojonegoro</p>
+                        <p>085230826139</p>
+                        <p>Putriirena61@gmail.com</p>
+                        <p>Sistem informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Kumara</h2>
+                        <hr>
+                        <p>Kumara Vito Frinanda</p>
+                        <p>Laki-laki</p>
+                        <p>Surakarta,03 januari 2003</p>
+                        <p>B21063</p>
+                        <p>Mangkuyudan rt.02/02 Laweyan,purwosari</p>
+                        <p>No.088221003514</p>
+                        <p>Email: kumara.vito@gmail.com</p>
+                        <p>Sistem informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Lubis</h2>
+                        <hr>
+                        <p>Zulkarnain Lubis</p>
+                        <p>laki-laki</p>
+                        <p>Palopo,22 Desember 2001</p>
+                        <p>B21043</p>
+                        <p>Cabeyan RT 05 RW 03,Bendosari, Sukoharjo</p>
+                        <p>081911046622</p>
+                        <p>zulkarnainlubis26@gmail.com</p>
+                        <p>Sistem informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Monica</h2>
+                        <hr>
+                        <p>Monica Sulistyawati </p>
+                        <p>Perempuan</p>
+                        <p>Ngawi, 8 September 2002</p>
+                        <p>B21072</p>
+                        <p>Pakah mantingan ngawi</p>
+                        <p>085233860209</p>
+                        <p>monicasulistyawati02@gmail.com</p>
+                        <p>Sistem informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Mutia</h2>
+                        <hr>
+                        <p>Mutia Nur Afifah</p>
+                        <p>Perempuan</p>
+                        <p>Pati, 04 Juni 2003</p>
+                        <p>B21058</p>
+                        <p>Jl. Punden Dk. Ndalem RT. 02/03 Ds. Karang Kec. Juwana Kab. Pati</p>
+                        <p>085786910983</p>
+                        <p>mutiafifah04@gmail.com</p>
+                        <p>Sistem informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Okky</h2>
+                        <hr>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Priyambodo</h2>
+                        <hr>
+                        <p>Priyambodo Adimas AT</p>
+                        <p>Laki-laki</p>
+                        <p>Boyolali,14 Oktober 2001</p>
+                        <p>B21044</p>
+                        <p>Gunung 06/14 Kemiri, Mojosongo, Boyolali</p>
+                        <p>083865920738</p>
+                        <p>priyambodoaat@gmail.com</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+                    
+                    <div class="container-main">
+                        <h2>Rafly</h2>
+                        <hr>
+                        <p>Rafly Erandi Indra Syaputra Yunus</p>
+                        <p>Laki Laki</p>
+                        <p>Surakarta, 16 juli 2001</p>
+                        <p>B21048</p>
+                        <p>Perumahan pondok baru permai blok A2 no.15 gentan baki skh</p>
+                        <p>085156540973</p>
+                        <p>rflyernd153@gmail.com</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Raihana</h2>
+                        <hr>
+                        <p>Raihana Novita Eka Safitri</p>
+                        <p>Perempuan</p>
+                        <p>Klaten,26 November 2003</p>
+                        <p>B21059</p>
+                        <p>Kerten rt02/03,Kepanjen,DelangguKlaten</p>
+                        <p>085799206107</p>
+                        <p>raihanaes370@gmail.com</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Rama</h2>
+                        <hr>
+                        <p>Ramadhan Aryo Wicaksono</p>
+                        <p>Laki-laki</p>
+                        <p>Sukoharjo, 08 November 2002</p>
+                        <p>B21083</p>
+                        <p></p>
+                        <p>082236991537</p>
+                        <p>21ramadhan.wicaksono@poltekindonusa.ac.id</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Rayhan</h2>
+                        <hr>
+                        <p>Rayhan Akbar Hidayat</p>
+                        <p>Laki-laki</p>
+                        <p>Klaten, 22 Januari 2003</p>
+                        <p>B21067</p>
+                        <p>Bloro, juwiran, juwiring, Klaten</p>
+                        <p>098779736171</p>
+                        <p>reyhanakbar2201@gmail.com</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Ridhwan</h2>
+                        <hr>
+                        <p>Ridhwan Rosyidi</p>
+                        <p>Laki-laki</p>
+                        <p>Ngawi, 6 Oktober 2002</p>
+                        <p>B21062</p>
+                        <p>Wonorejo, Kedunggalar, Ngawi</p>
+                        <p>081336884677</p>
+                        <p>ridhwanrosyidi@gmail.com</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Rizky</h2>
+                        <hr>
+                        <p>Riszki saputra</p>
+                        <p>Laki-Laki</p>
+                        <p>Sragen 19 September 2001</p>
+                        <p>B21082</p>
+                        <p>Tegalrejo rt 024 rw 007 jurangjero, Karangmalang, Sragen</p>
+                        <p>riszkis404@gmail.com</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Tiara</h2>
+                        <hr>
+                        <p>Tiara Oktaviana</p>
+                        <p>Perempuan</p>
+                        <p>Surakarta, 10 Oktober 2002</p>
+                        <p>B21065</p>
+                        <p>Babad Rt 01 Rw 04 Manang, Grogol, Sukoharjo</p>
+                        <p>Hp : 082354063354</p>
+                        <p>tiaraoktaviana61@gmail.com</p>
+                        <p>Sistem Informasi</p>
+                    </div>
+
+                    <div class="container-main">
+                        <h2>Tita</h2>
+                        <hr>
+                        <p>Tita Aracelya Rakyanratri</p>
+                        <p>Perempuan</p>
+                        <p>Surakarta, 14 Mei 2002</p>
+                        <p>B21066</p>
+                        <p>Jati Kembaran Rt.3/Rw.7, Mulur, Bendosari Sukoharjo</p>
+                        <p>083866070493</p>
+                        <p>titaaracelyar14@gmail.com</p>
+                        <P>Sistem informasi</P>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <p>&copy All Right Reserved | FDA | 2022</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const judul = document.querySelectorAll('main>*>h2');
+        const judul2 = [...judul].map(n => n.textContent);
+
+
+        const li2 = [];
+        const navUl = document.querySelector('nav ul');
+        const isi = document.querySelectorAll('main>*');
+        for (let i = 0; i < judul.length; i++) {
+            let li = document.createElement('li');
+            li2.push(li);
+            li2[i].textContent = judul2[i];
+            navUl.appendChild(li2[i]);
+
+            isi[i].style.display = 'none';
+            isi[0].style.display = 'block';
+            li2[0].classList.add('dipilih');
+            li2[i].addEventListener('click', function() {
+                for (let i2 = 0; i2 < judul.length; i2++) {
+                    isi[i2].style.display = 'none';
+                    li2[i2].classList.remove('dipilih');
+                }
+                isi[i].style.display = 'block';
+                li2[i].classList.add('dipilih');
+                navUl.parentElement.classList.remove('tampil');
+            });
+        }
+
+        const tombol = document.querySelector('.tombol');
+        tombol.addEventListener('click', function() {
+            navUl.parentElement.classList.toggle('tampil');
+        });
+    </script>
+</body>
+</html>
